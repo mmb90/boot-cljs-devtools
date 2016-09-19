@@ -4,7 +4,7 @@
 ** Installation
 Latest version:
 
-[[https://clojars.org/jupl/boot-cljs-devtools][https://img.shields.io/clojars/v/powerlaces/boot-cljs-devtools.svg]]
+[[https://clojars.org/powerlaces/boot-cljs-devtools][https://img.shields.io/clojars/v/powerlaces/boot-cljs-devtools.svg]]
 
 In order to install it, add the following to your =build.boot= dependencies:
 #+BEGIN_SRC clojure
