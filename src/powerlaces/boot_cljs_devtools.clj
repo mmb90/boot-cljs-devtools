@@ -10,7 +10,7 @@
 (def ^:private deps '#{binaryage/devtools binaryage/dirac})
 
 (defn- add-preloads! [in-file out-file]
-  (let [preloads ['devtools.preload 'powerlaces.boot-cljs-devtools.preload]
+  (let [preloads ['devtools.preload 'dirac.runtime.preload]
         spec (-> in-file slurp read-string)]
     (when (not= :nodejs (-> spec :compiler-options :target))
       (util/info
@@ -49,7 +49,7 @@
 (def nrepl-defaults
   {:port 8230
    :server true
-   :middleware ['dirac.nrepl.middleware/dirac-repl]})
+   :middleware ['dirac.nrepl/middleware]})
 
 (boot/deftask cljs-devtools
   "Add Chrome Devtool enhancements for ClojureScript development."
